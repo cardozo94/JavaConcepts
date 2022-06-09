@@ -17,7 +17,7 @@ public class Exercises {
 	}
 	
 	private static void printCoursesWhoseNameHasAtLeast4Letters() {
-		courses.stream().filter(w -> w.length() >= 4).forEach(System.out::println);		
+		courses.stream().filter(w -> w.length() >= 4).forEach(System.out::println);
 	}
 
 	private static void printCoursesContainingWordSpring() {
