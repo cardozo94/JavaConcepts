@@ -136,5 +136,13 @@ public class FP04CustomClass {
         System.out.println(courses.stream()
                 .collect(Collectors.groupingBy(Course::getCategory, Collectors.mapping(Course::getName, Collectors.toList()))));
         //{Cloud=[AWS, Azure, Docker, Kubernetes], FullStack=[FullStack], Framework=[Spring, Spring Boot, API, Microservicios]}
+
+
+        Predicate<Course> reviewScoreGreaterThan95Predicate2= createPredicateWithCutoffReviewScore(95);
+        Predicate<Course> reviewScoreGreaterThan90Predicate2 = createPredicateWithCutoffReviewScore(90);
+    }
+
+    private static Predicate<Course> createPredicateWithCutoffReviewScore(int cutoffReviewScore) {
+        return course -> course.getReviewScore() > cutoffReviewScore;
     }
 }
