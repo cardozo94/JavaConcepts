@@ -11,8 +11,8 @@ public class FP03BehaviorParametrization {
         List<Integer> numbers = List.of(12, 9, 13, 4, 6, 4, 12, 15);
         Predicate<Integer> evenPredicate = x -> x % 2 == 0;
         Predicate<Integer> oddPredicate = x -> x % 2 != 0;
-        //filterAndPrint(numbers, evenPredicate);
-        //filterAndPrint(numbers, oddPredicate);
+        filterAndPrint(numbers, evenPredicate);
+        filterAndPrint(numbers, oddPredicate);
         filterAndPrint(numbers, x -> x%3==0);
         Function<Integer, Integer> squaredFunction = number -> number * number;
         List<Integer> squaredNumbers = mapAndCreateNewList(numbers, squaredFunction);

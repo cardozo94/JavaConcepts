@@ -10,19 +10,19 @@ public class FP02Structured {
         List<Integer> numbers = List.of(12,9,13,4,6,2,4,12,15);
         List<String> courses = List.of("Spring", "Spring Boot", "API", "Microservices","AWS","PCF","Azure","Docker","Kubernetes");
         int sum =  addListFunctional(numbers);
-       // System.out.println(sum);
-        //System.out.println("");
-        //sumOfSquares(numbers);
-        //System.out.println("");
-        //sumOfCubes(numbers);
-        //System.out.println("");
-        //sumOfOddNumbers(numbers);
-        //disctictAndSortedNumbers(numbers);
-        //sortedWithComparator(courses);
+        System.out.println(sum);
+        System.out.println("");
+        sumOfSquares(numbers);
+        System.out.println("");
+        sumOfCubes(numbers);
+        System.out.println("");
+        sumOfOddNumbers(numbers);
+        disctictAndSortedNumbers(numbers);
+        sortedWithComparator(courses);
         List<Integer> squareNumbers = squareNumbersList(numbers);
         System.out.println(squareNumbers);
-        //List<Integer> evenNumbers = evenNumbersList(numbers);
-        //System.out.println(evenNumbers);
+        List<Integer> evenNumbers = evenNumbersList(numbers);
+        System.out.println(evenNumbers);
         List<Integer> lengths = lengthList(courses);
         System.out.println(lengths);
     }
@@ -32,7 +32,7 @@ public class FP02Structured {
     }
 
     private static List<Integer> evenNumbersList(List<Integer> numbers) {
-        return numbers.stream().filter(x -> x%2 != 0).collect(Collectors.toList());
+        return numbers.stream().filter(x -> x%2 == 0).collect(Collectors.toList());
     }
 
     private static List<Integer> squareNumbersList(List<Integer> numbers) {

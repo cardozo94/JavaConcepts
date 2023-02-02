@@ -7,7 +7,7 @@ public class Exercises {
 	static List<String> courses = List.of("Spring", "Spring Boot", "API", "Microservices","AWS","PCF","Azure","Docker","Kubernetes");
 	
 	public static void main(String[] args) {
-		printOddNumbresFromList();
+		printOddNumbersFromList();
 		System.out.println();
 		printAllCoursesIndividually();
 		System.out.println();
@@ -30,7 +30,7 @@ public class Exercises {
 		
 	}
 
-	public static void printOddNumbresFromList() {
+	public static void printOddNumbersFromList() {
 		List<Integer> numbers = List.of(1, 8, 3, 4, 6, 12, 19, 15, 56, 48);
 		numbers.stream().filter(n -> (n%2) != 0).forEach(System.out::println);
 	}
